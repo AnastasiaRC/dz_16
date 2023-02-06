@@ -100,6 +100,8 @@ def user(user_id: int):
         user_.phone = usr_data['phone']
         user_.email = usr_data['email']
         user_.age = usr_data['age']
+        db.session.add(user_)
+        db.session.commit()
         return '', 204
 
 
